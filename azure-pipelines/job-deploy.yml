@@ -8,7 +8,7 @@
 parameters:
 - name: azureSubscription
   type: string
-  default: 'wavescape'
+  #default: 'wavescape'
 
 jobs:
 - job: StandupAzureInfra
