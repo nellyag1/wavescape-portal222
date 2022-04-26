@@ -67,7 +67,7 @@ jobs:
   - task: AzureCLI@2
     displayName: Deploy API
     inputs:
-      azureSubscription: 'wavescape'
+      azureSubscription: '90d7af21-b3a1-4bf8-a149-8e1fcc47e337'
       scriptLocation: 'scriptPath'
       scriptType: 'bash'
       scriptPath: './bin/api-deploy.sh'
