@@ -1,0 +1,19 @@
+# +----------------------------------------------------------------------------
+# | Copyright (c) 2022 Pivotal Commware
+# | All rights reserved.
+# +----------------------------------------------------------------------------
+
+# DO NOT include azure-functions-worker in this file
+# The Python Worker is managed by Azure Functions platform
+# Manually managing azure-functions-worker may cause unexpected issues
+
+azure-functions
+azure-functions-durable
+jsonpickle
+azure-storage-blob
+azure-data-tables
+azure-mgmt-storage
+flake8
+requests
+flask
+ipython

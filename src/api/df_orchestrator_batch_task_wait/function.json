@@ -1,0 +1,10 @@
+{
+    "scriptFile": "df_orchestrator_batch_task_wait.py",
+    "bindings": [
+        {
+            "name": "context",
+            "type": "orchestrationTrigger",
+            "direction": "in"
+        }
+    ]
+}

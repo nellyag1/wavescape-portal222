@@ -1,0 +1,839 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2022 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+/* Pivotal Commware Theme for W3.CSS - Christophe Vidal September 18, 2018 */
+
+/* Branded colors */
+:root {
+    /* Branded colors */
+    --ibmsGray: #797b82;
+    /* Pivotal Gray */
+    --ibmsDarkOrange: #f36c21;
+    /* Pivotal Dark Orange */
+    --ibmsOrange: #f68946;
+    /* Pivotal Orange */
+    --ibmsLightOrange: #f9a46f;
+    /* Pivotal Light Orange */
+
+    /* Additional colors */
+    --ibmsDarkGray: #424242;
+    /* Pivotal Cyber Gray */
+    --ibmsTrayGray: #b6b6b6;
+    /* Pivotal Tray */
+    --ibmsRhinoGray: #cbcbcb;
+    /* Pivotal Rhino */
+    --ibmsLightGray: #d8d8d8;
+    /* Pivotal Wacom Pad */
+    --ibmsNavy: #1d3648;
+    /* Pivotal Navy */
+    --ibmsBlue: #005082;
+    /* Pivotal Space */
+    --ibmsFrozen: #f8f9fa;
+    /* Pivotal Frozen */
+    --ibmsLink: #0095ff;
+    /* Pivotal Link */
+
+    --ibmsConsoleTileWhite: #ffffff;
+    --ibmsTextDarkGray: #444444;
+    --ibmsTextLightGray: #999999;
+    --ibmsTextDarkBlue: #334499;
+    --ibmsBorderGray: #999999;
+    --ibmsIconBlue: #1d64ab;
+    --ibmsIconLightBlue: #5da4db;
+    --ibmsPageBackgroundGray: #fafafa;
+    --ibmsBorderLightGray: #e0e0e0;
+    --ibmsButtonDisabledGray: #cccccc;
+    --ibmsButtonLightBlue: #ccdde9;
+
+    --spaceBlue: #1d3648;
+    --spaceBlue-2: #445e6f;
+    --spaceBlue-3: #738692;
+    --spaceBlue-4: #a3afb7;
+    --spaceBlue-5: #d1d7da;
+    --spaceBlue-6: #e7eaec;
+    --spaceBlue-7: #f2f5f6;
+    --spaceBlue-8: #fbfbfb;
+
+    --bermudaBlue: #005082;
+    --bermudaBlue-2: #06749f;
+    --bermudaBlue-3: #5697b7;
+    --bermudaBlue-4: #90bacf;
+    --bermudaBlue-5: #c8dde7;
+    --bermudaBlue-6: #e3edf3;
+    --bermudaBlue-7: #f1f6f9;
+    --bermudaBlue-8: #fafcfd;
+
+    --pivotalGray: #7d7d7d;
+    --pivotalGray-2: #979797;
+    --pivotalGray-3: #b1b1b1;
+    --pivotalGray-4: #cbcbcb;
+    --pivotalGray-5: #e5e5e5;
+    --pivotalGray-5-5: #ececec;
+    --pivotalGray-6: #f2f2f2;
+    --pivotalGray-7: #f8f8f8;
+    --pivotalGray-8: #fdfdfd;
+
+    --pivotalBlack: #050505;
+    --pivotalBlack-2: #333333;
+    --pivotalBlack-3: #666666;
+
+    --pivotalOrange: #f36e21;
+    --pivotalOrange-2: #ff853a;
+    --pivotalOrange-3: #ffa471;
+    --pivotalOrange-4: #ffc3a1;
+    --pivotalOrange-5: #ffe1d1;
+    --pivotalOrange-6: #fff0e7;
+    --pivotalOrange-7: #fff8f3;
+    --pivotalOrange-8: #fffcfb;
+
+    --successGreen: #009527;
+
+    --successGreen-2: #00ad46;
+    --successGreen-3: #3cc276;
+    --successGreen-4: #87d7a5;
+    --successGreen-5: #b2dfbe;
+    --successGreen-6: #ccead4;
+    --successGreen-7: #e5f4e9;
+    --successGreen-8: #f2f9f4;
+
+    --errorRed: #c60000;
+    --errorRed-bg: #ffe5e5;
+    --errorRed-border: #ffcdce;
+    --errorRed-errorBox: rgba(198, 0, 0, 0.05);
+
+    /* Font */
+    --ibmsFont: 'Rubik';
+    --ibmsFont-1: 300 47px 'Rubik';
+    --ibmsFont-2: 300 32px 'Rubik';
+    --ibmsFont-3: 300 28px 'Rubik';
+    --ibmsFont-4: 300 24px 'Rubik';
+    --ibmsFont-5: 300 20px 'Rubik';
+    --ibmsFont-6: 300 16px 'Rubik';
+    --ibmsFont-7: normal 14px 'Rubik';
+    --ibmsFont-8: 300 14px 'Rubik';
+    --ibmsFont-9: 300 12px 'Rubik';
+    --ibmsFont-10: normal 14px 'Rubik';
+    --ibmsFont-11: 300 14px 'Rubik';
+
+    --ibmsFontWeight: 300;
+
+    /* Spacing */
+    --xx-small: 4px;
+    --x-small: 8px;
+    --small: 12px;
+    --medium: 16px;
+    --large: 24px;
+    --x-large: 48px;
+
+    --dropBoxShadow: 0px 0px 1px 0px rgba(9, 30, 66, 0.3), 0px 4px 8px -2px rgba(9, 30, 66, 0.3);
+    --dropShadow1: 0px 2px 4px 0px rgba(51, 51, 51, 0.5);
+}
+
+.Global_PrimaryButton_Red,
+.Global_PrimaryButton {
+    color: white;
+    background-color: var(--bermudaBlue);
+    border-radius: 3px;
+    font: var(--ibmsFont-7);
+    height: 40px;
+    padding: 8px 12px 8px;
+    border: 1px solid var(--bermudaBlue-2);
+}
+
+.Global_PrimaryButton:hover {
+    color: white;
+    background-color: var(--bermudaBlue-2);
+    border: 1px solid var(--bermudaBlue-2);
+    cursor: pointer;
+}
+
+.Global_PrimaryButton:disabled {
+    color: var(--pivotalGray-2);
+    background-color: var(--pivotalGray-5);
+    border: none;
+    cursor: auto;
+}
+
+.Global_PrimaryButton_Red {
+    color: var(--errorRed);
+    background-color: var(--errorRed-bg);
+    border: 1px solid var(--errorRed-border);
+}
+
+.Global_PrimaryButton_Red:hover {
+    color: white;
+    background-color: var(--errorRed);
+    border: 1px solid var(--errorRed-border);
+    cursor: pointer;
+}
+
+.Global_SecondaryButton {
+    background-color: var(--bermudaBlue-6);
+    border: 1px solid var(--bermudaBlue-2);
+    border-radius: 3px;
+    padding: 0px 16px 0px;
+    height: 40px;
+    font: var(--ibmsFont-7);
+    color: var(--bermudaBlue);
+    cursor: pointer;
+}
+
+.Global_SecondaryButton:hover {
+    background-color: var(--bermudaBlue-5);
+    border-color: var(--bermudaBlue-3);
+    cursor: pointer;
+}
+
+.Global_SecondaryButton:disabled {
+    color: var(--pivotalGray-2);
+    background-color: var(--pivotalGray-6);
+    border-color: var(--pivotalGray-5);
+    cursor: auto;
+}
+
+.Global_Table_PrimaryButton,
+.Global_Table_SecondaryButton {
+    font: 400 12px 'Rubik';
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 12px 4px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--pivotalOrange-7);
+    border: 1px solid var(--pivotalOrange-4);
+    color: var(--pivotalOrange-2);
+}
+
+.Global_Table_PrimaryButton {
+    background-color: var(--bermudaBlue-7);
+    border: 1px solid var(--bermudaBlue-4);
+    color: var(--bermudaBlue-2);
+}
+
+.Global_Table_PrimaryButton:hover {
+    border-color: var(--bermudaBlue-2);
+    color: var(--bermudaBlue);
+}
+
+.Global_Table_SecondaryButton {
+    background-color: var(--pivotalOrange-7);
+    border: 1px solid var(--pivotalOrange-4);
+    color: var(--pivotalOrange-2);
+}
+
+.Global_Table_SecondaryButton:hover {
+    border-color: var(--pivotalOrange-2);
+    color: var(--pivotalOrange);
+}
+
+.Global_Table_SecondaryButton:disabled {
+    color: var(--pivotalGray-2);
+    background-color: var(--pivotalGray-7);
+    border: 1px solid var(--pivotalGray-5);
+    cursor: auto;
+}
+
+.Global_TertiaryButton {
+    color: var(--bermudaBlue-1);
+    font: var(--ibmsFont-8);
+    background-color: white;
+    border: none;
+    height: 40px;
+    padding: 8px 12px 8px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.Global_TertiaryButton:hover {
+    color: var(--bermudaBlue-2);
+}
+
+.Global_Table_Link {
+    font: 400 12px 'Rubik';
+    padding: 8px 12px 8px;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    color: var(--ibmsLink);
+    text-align: center;
+    cursor: pointer;
+}
+
+.Global_Table_Link:hover {
+    background-color: var(--bermudaBlue-7);
+}
+
+.Global_Button_withIcon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Global_FinishButtons_Div {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+}
+
+.Global_Large_Button:disabled {
+    display: inline-block;
+    width: 470px;
+    height: 64px;
+    font: var(--ibmsFont-7);
+    border-radius: 3px;
+    border: 1px solid var(--pivotalGray-5);
+    background-color: var(--pivotalGray-6);
+    pointer-events: none;
+}
+
+.Global_Large_Button:disabled .Global_Large_Button_InnerDiv .SvgAF img {
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+
+.Global_Large_Button:disabled .Global_Large_Button_Message {
+    color: var(--pivotalGray-2);
+}
+
+.Global_Large_Button {
+    display: inline-block;
+    width: 470px;
+    height: 64px;
+    font: var(--ibmsFont-7);
+    border-radius: 3px;
+    background-color: var(--pivotalGray-8);
+}
+
+.Global_Large_Button {
+    border: var(--bermudaBlue-4) solid 1px;
+    cursor: pointer;
+}
+
+.Global_Large_Button:hover {
+    color: var(--bermudaBlue-3);
+    background-color: var(--bermudaBlue-7);
+    border-color: var(--bermudaBlue-2);
+    cursor: pointer;
+}
+
+.Global_Large_Button > div > img {
+    width: 36px;
+    height: 36px;
+}
+
+.Global_Large_Button_OuterDiv {
+    margin-bottom: 24px;
+}
+
+.Global_Large_Button_InnerDiv {
+    display: flex;
+    height: 100%;
+    margin: auto 0;
+    padding: 0 24px;
+}
+
+.Global_Large_Button_InnerDiv p {
+    margin: auto 0;
+    padding-left: 14px;
+}
+
+.Global_Large_Button_Message {
+    color: var(--pivotalBlack);
+    font: var(--ibmsFont-7);
+    margin: 30px;
+}
+
+.Global_InputField textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.Global_InputField {
+    font: var(--ibmsFont-7);
+    color: var(--spaceBlue);
+    font-style: normal;
+    background-color: var(--bermudaBlue-8);
+    border: 1px solid var(--spaceBlue-5);
+    border-radius: 3px;
+    height: 32px;
+}
+
+.Global_Table_InputField {
+    background-color: var(--spaceBlue-7);
+    border: 1px solid var(--spaceBlue-7);
+    height: 32px;
+    width: 100%;
+    margin-right: 8px;
+    padding-left: 8px;
+}
+
+.Global_Form {
+    width: 100%;
+}
+
+.Global_InputField:focus {
+    border: 1px solid var(--bermudaBlue-3);
+    background-color: white;
+}
+
+.Global_InputField::placeholder {
+    font-style: italic;
+}
+
+.Global_Tooltip {
+    background-color: var(--bermudaBlue-7) !important;
+    color: var(--spaceBlue) !important;
+    border: 1px solid var(--spaceBlue-4) !important;
+    font: 300 12px 'Rubik' !important;
+    line-height: 16px !important;
+    margin-top: 0 !important;
+    max-width: 400px;
+    min-height: 24px;
+    display: flex !important;
+    align-items: center;
+    vertical-align: middle;
+    white-space: pre-wrap;
+    padding: 4px 12px 4px !important;
+}
+
+.Global_Modal {
+    padding: 32px;
+    background-color: white;
+    margin: auto;
+    max-width: 900px;
+    min-width: 500px;
+    max-height: 700px;
+    margin-top: 100px;
+    border-radius: 3px;
+}
+
+.Global_Modal:focus {
+    outline: none;
+}
+
+.Global_ModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Global_Header_OuterDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.Global_Modal_Header {
+    font: 500 18px 'Rubik';
+    color: var(--pivotalBlack-2);
+}
+
+.Global_Modal_BackIcon_Header {
+    font: 500 18px 'Rubik';
+    color: var(--pivotalBlack-2);
+    padding-left: 14px;
+}
+
+.Global_Subheader {
+    font: var(--ibmsFont-7);
+    color: var(--spaceBlue);
+    margin-bottom: 24px;
+    margin-top: 18px;
+}
+
+.Global_Subheader_Span {
+    font: 400 16px 'Rubik';
+    color: var(--spaceBlue);
+}
+
+.Global_Subheader_Span_Bolder {
+    font: 500 14px 'Rubik';
+    color: var(--spaceBlue);
+}
+
+@media (max-width: 859px) {
+    .Global_Modal {
+        width: 90%;
+    }
+
+    .Global_DropDown_Container {
+        width: 160px;
+    }
+
+    .Global_Dropdown_ListContainer {
+        width: 210px;
+    }
+}
+
+@media (min-width: 860px) {
+    .Global_Modal {
+        width: 80%;
+    }
+
+    .Global_DropDown_Container {
+        width: 200px;
+    }
+
+    .Global_Dropdown_ListContainer {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .Global_Modal {
+        width: 70%;
+    }
+
+    .Global_DropDown_Container {
+        width: 230px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .Global_DropDown_Container {
+        width: 256px;
+    }
+}
+
+.Global_Table_Container {
+    overflow: auto;
+    outline: 1px solid var(--pivotalGray-4);
+    border-radius: 3px;
+    width: 100%;
+}
+
+.Global_Table_Container_Height {
+    min-height: 64vh;
+    max-height: calc(65vh - 50px);
+}
+
+.Global_Table {
+    border-bottom-style: none;
+    width: 100%;
+}
+
+.Global_Table {
+    border-bottom-style: none;
+    width: 100%;
+}
+
+.Global_Table thead {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.Global_Table :last-child > :last-child > td {
+    border-bottom: none !important;
+}
+
+.Global_Table_OuterDiv_2col {
+    display: flex;
+    flex-direction: row;
+}
+
+.Global_Table_Div_2col {
+    width: 1108px;
+}
+
+.Global_Table_tr-th_GrayBorder {
+    padding: 0px var(--medium) 0px var(--medium);
+    border-bottom: 1px solid var(--pivotalGray-4);
+}
+
+.Global_Table_tr-th_isSorted,
+.Global_Table_tr-th {
+    height: 40px;
+    font: 400 12px 'Rubik';
+    text-transform: uppercase;
+    color: var(--pivotalBlack-2);
+    padding: 0px var(--medium) 0px var(--medium);
+    vertical-align: middle;
+    text-align: left;
+    border-bottom: 1px solid var(--pivotalGray-4);
+}
+
+.Global_Table_tr-th_isSorted {
+    background-color: var(--bermudaBlue-6);
+}
+
+.Global_Table_tr-th {
+    background-color: var(--pivotalGray-6);
+}
+
+.Global_Table_td {
+    font: var(--ibmsFont-11);
+    color: var(--spaceBlue);
+    padding: 0 var(--medium) 0 var(--medium) !important;
+    height: 40px;
+    border-color: var(--pivotalGray-4);
+    border-bottom-style: solid;
+    border-width: 1px;
+    max-width: 300px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.Global_Table_td_Link {
+    background-color: var(--bermudaBlue-7);
+    cursor: pointer;
+}
+
+.Global_Table_Subheader_Div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.Global_ListContainer_topMargin {
+    margin-top: 60px;
+}
+
+.Global_ListContainer {
+    background-color: var(--pivotalGray-7);
+    border-radius: 3px;
+    font: var(--ibmsFont-8);
+    margin-left: 32px;
+    width: 470px;
+    height: 172px;
+}
+
+.Global_ListContainer ul {
+    padding-left: 24px;
+}
+
+.Global_ListItem {
+    list-style: none;
+    box-sizing: border-box;
+    color: var(--spaceBlue);
+    cursor: pointer;
+    padding: 20px 16px 20px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.Global_ListItem a {
+    display: flex;
+    align-items: center;
+    color: var(--spaceBlue);
+    text-decoration: none;
+}
+
+.Global_ListItem a:hover,
+.Global_ListItem a:active {
+    color: var(--bermudaBlue-2);
+}
+
+.Global_ListItem > div > img {
+    padding-right: 12px;
+}
+
+.Global_DropDown_Container {
+    cursor: default;
+    outline: none;
+    transition: all 200ms ease;
+    font: 300 13px 'Rubik';
+    color: var(--spaceBlue);
+    border-color: var(--bermudaBlue-6);
+    background-color: var(--pivotalGray-8);
+    position: relative;
+    display: inline-block;
+}
+
+.Global_Dropdown_ListContainer {
+    background-color: white;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: var(--dropBoxShadow);
+    font: var(--ibmsFont-8);
+    padding-left: 0;
+    position: absolute;
+    z-index: 1;
+    margin-top: 3px;
+    overflow-y: auto;
+}
+
+@media (max-height: 900px) {
+    .Global_Dropdown_ListContainer.dropdown-top {
+        top: auto;
+        bottom: 100%;
+    }
+}
+
+.Global_Dropdown_ListContainer.is-open {
+    animation: fadeinheight 280ms;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.Global_Dropdown_ListContainer.not-open {
+    animation: fadeoutheight 150ms;
+}
+
+.Global_Dropdown_List {
+    padding-left: 0;
+    height: 200px;
+    overflow-y: auto;
+}
+
+@media (min-height: 900px) {
+    .Global_Dropdown_List {
+        max-height: 230px;
+    }
+}
+
+.Global_Dropdown_ListItem {
+    list-style: none;
+    box-sizing: border-box;
+    color: var(--spaceBlue);
+    cursor: pointer;
+    display: block;
+    padding: 20px 20px 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.Global_Dropdown_ListItem_Disabled {
+    list-style: none;
+    box-sizing: border-box;
+    color: var(--ibmsBorderGray);
+    cursor: default;
+    display: block;
+    padding: 20px 20px 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.Global_Dropdown_ListItem:hover {
+    background-color: var(--bermudaBlue-7);
+    font: var(--ibmsFont-7);
+}
+
+.Global_Dropdown_ListLabel {
+    padding: 20px 20px 0;
+    font: 400 12px 'Rubik';
+    text-transform: uppercase;
+    color: var(--pivotalBlack-2);
+}
+
+.Global_Container {
+    margin: 32px 32px 32px;
+}
+
+.Global_Header_Div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Global_Header_withSubheader_Div {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Global_Row_withIcon,
+.Global_BackIcon_Header {
+    display: flex;
+    flex-direction: row;
+}
+
+.Global_Row_withIcon {
+    align-items: center;
+}
+
+.Global_Row_withIcon > div > img {
+    width: 18px;
+    padding-right: 8px;
+}
+
+.Global_Header_InnerDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.Global_Data_TimeStamp {
+    font: var(--ibmsFont-9);
+    color: var(--spaceBlue);
+    margin-bottom: 24px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-style: italic;
+}
+
+.Global_Data_TimeStamp > div > img {
+    margin-left: 8px;
+}
+
+.Global_Title {
+    font: 300 28px 'Rubik';
+    color: var(--ibmsFont-2);
+    margin: 20px 0 20px;
+}
+
+.Global_Title_withBack {
+    padding-left: 24px;
+}
+
+.Global_Icon_Div_40 {
+    min-width: 40px;
+}
+
+.Global_Loading {
+    cursor: wait;
+}
+
+.Global_Loading * {
+    pointer-events: none;
+}
+
+@keyframes fadeinheight {
+    0% {
+        opacity: 0;
+        max-height: 0px;
+    }
+    100% {
+        opacity: 1;
+        max-height: 500px;
+    }
+}
+
+@keyframes fadeoutheight {
+    0% {
+        opacity: 1;
+        max-height: 500px;
+        width: 100%;
+    }
+    50% {
+        opacity: 0;
+        max-height: 0px;
+        width: 100%;
+    }
+    100% {
+        width: 0px;
+    }
+}

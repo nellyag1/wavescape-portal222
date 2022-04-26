@@ -1,0 +1,45 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/ubuntu
+{
+    "name": "WaveScape Portal",
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "target": "devcontainer"
+    },
+
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+        "ms-python.python",
+        "ms-vscode.azure-account",
+        "streetsidesoftware.code-spell-checker",
+        "ms-azuretools.vscode-bicep",
+        "ms-azuretools.vscode-azurefunctions",
+        "esbenp.prettier-vscode",
+        "kevinglasson.cornflakes-linter",
+        "azurite.azurite"
+    ],
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [
+        9091,  // Python debugger
+        7071,  // Azure functions
+        3000,  // React
+        4280,  // SWA
+        5000,  // Flask
+        10000, // Azurite Blob Service
+        10001, // Azurite Queue Service
+        10002, // Azurite Table Service
+    ],
+
+    // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "vscode",
+    "features": {
+        "docker-in-docker": "latest",
+    },
+
+    "containerEnv": {
+        "FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT": "1"
+    },
+
+	"postAttachCommand": "$(pwd)/bin/bootstrap.sh"
+}

@@ -1,0 +1,40 @@
+{
+    "version": "2.0",
+    "logging": {
+        "applicationInsights": {
+            "samplingSettings": {
+                "isEnabled": true,
+                "excludedTypes": "Request"
+            }
+        }
+    },
+    "extensionBundle": {
+        "id": "Microsoft.Azure.Functions.ExtensionBundle",
+        "version": "[2.*, 3.0.0)"
+    },
+    "extensions": {
+        "durableTask": {
+            "hubName": "WaveScapeTaskHub",
+            "storageProvider": {
+                "connectionStringName": "AzureWebJobsStorage",
+                "controlQueueBatchSize": 32,
+                "controlQueueBufferThreshold": 256,
+                "controlQueueVisibilityTimeout": "00:05:00",
+                "maxQueuePollingInterval": "00:00:30",
+                "partitionCount": 4,
+                "trackingStoreConnectionStringName": "AzureWebJobsStorage",
+                "trackingStoreNamePrefix": "DurableTask",
+                "workItemQueueVisibilityTimeout": "00:05:00"
+            },
+            "tracing": {
+                "traceInputsAndOutputs": false,
+                "traceReplayEvents": false
+            },
+            "maxConcurrentActivityFunctions": 10,
+            "maxConcurrentOrchestratorFunctions": 10,
+            "extendedSessionsEnabled": false,
+            "extendedSessionIdleTimeoutInSeconds": 30,
+            "useGracefulShutdown": false
+        }
+    }
+}

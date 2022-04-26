@@ -1,0 +1,25 @@
+{
+    "scriptFile": "session_configure.py",
+    "bindings": [
+        {
+            "authLevel": "Anonymous",
+            "type": "httpTrigger",
+            "direction": "in",
+            "name": "req",
+            "route": "sessions/{sessionName}/configure",
+            "methods": [
+                "post"
+            ]
+        },
+        {
+            "type": "http",
+            "direction": "out",
+            "name": "$return"
+        },
+        {
+            "name": "starter",
+            "type": "durableClient",
+            "direction": "in"
+        }
+    ]
+}

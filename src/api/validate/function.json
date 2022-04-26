@@ -1,0 +1,25 @@
+{
+    "scriptFile": "session_validate.py",
+    "bindings": [
+        {
+            "authLevel": "Anonymous",
+            "type": "httpTrigger",
+            "direction": "in",
+            "name": "req",
+            "route": "sessions/{sessionName}/validate",
+            "methods": [
+                "get", "post"
+            ]
+        },
+        {
+            "type": "http",
+            "direction": "out",
+            "name": "$return"
+        },
+        {
+            "name": "starter",
+            "type": "durableClient",
+            "direction": "in"
+        }
+    ]
+}

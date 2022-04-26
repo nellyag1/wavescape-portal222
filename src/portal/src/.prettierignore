@@ -1,0 +1,14 @@
+# testing
+coverage/
+
+# production
+node_modules/
+deployment/
+public/
+server/
+
+# package
+package.json
+package-lock.json
+
+README.md

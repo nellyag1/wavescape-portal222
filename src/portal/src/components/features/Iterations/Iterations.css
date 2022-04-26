@@ -1,0 +1,79 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2022 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+.IterationsTable_Container_Height {
+    min-height: 60vh;
+    max-height: calc(60vh -  50px);
+    margin: 0px 0px 8px;
+}
+
+.IterationsTable_OuterDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.IterationTable_Subheader_Div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.IterationTable_Subheader_InnerDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.IterationTable_Subheader_InnerDiv p {
+    padding-right: 24px;
+}
+
+.IterationsTable_Switch {
+    position: relative;
+    display: inline-block;
+    width: 33px;
+    height: 17px;
+}
+
+.IterationsTable_Switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.IterationsTable_Slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--pivotalGray-4);
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.IterationsTable_Slider:before {
+    position: absolute;
+    content: '';
+    height: 13px;
+    width: 13px;
+    left: 3px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.IterationTable_zIndex {
+    z-index: 1;
+}
+
+input:checked + .IterationsTable_Slider {
+    background-color: var(--bermudaBlue-2);
+}
+
+input:checked + .IterationsTable_Slider:before {
+    transform: translateX(14px);
+}

@@ -1,0 +1,15 @@
+{
+    "scriptFile": "df_activity_update_session.py",
+    "bindings": [
+        {
+            "name": "payload",
+            "type": "activityTrigger",
+            "direction": "in"
+        },
+        {
+            "name": "starter",
+            "type": "durableClient",
+            "direction": "in"
+        }
+    ]
+}

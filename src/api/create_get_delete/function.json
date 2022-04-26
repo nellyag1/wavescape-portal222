@@ -1,0 +1,25 @@
+{
+    "scriptFile": "session_create_get_delete.py",
+    "bindings": [
+        {
+            "authLevel": "Anonymous",
+            "type": "httpTrigger",
+            "direction": "in",
+            "name": "req",
+            "route": "sessions/{sessionName}",
+            "methods": [
+                "put", "get", "delete"
+            ]
+        },
+        {
+            "type": "http",
+            "direction": "out",
+            "name": "$return"
+        },
+        {
+            "name": "starter",
+            "type": "durableClient",
+            "direction": "in"
+        }
+    ]
+}

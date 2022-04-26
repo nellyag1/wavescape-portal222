@@ -1,0 +1,103 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2022 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+.SessionDetails_thead {
+    display: none;
+}
+
+.SessionDetails_td_col1_Custom {
+    font: 400 12px 'Rubik';
+    text-transform: uppercase;
+    color: var(--pivotalBlack-2);
+    border-bottom: 1px solid var(--pivotalGray-4);
+    padding-left: 16px;
+    min-width: 100px;
+}
+
+.SessionDetails_td_col3_Width {
+    width: 20px;
+}
+
+.Validate_Subheader_Span {
+    font: var(--ibmsFont-9);
+    font-style: italic;
+    padding-left: 4px;
+}
+
+.SessionDetails_Margin {
+    margin-left: 24px;
+}
+
+.SecondaryAction_Button {
+    padding: 0 12px 0;
+    height: 65px;
+    margin-right: 24px;
+}
+
+.Message {
+    font: var(--ibmsFont-9);
+    font-style: italic;
+    max-width: 80%;
+    cursor: default;
+}
+
+.ModalOverlay_Outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.SessionDetails_Large_Buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 64px;
+}
+
+.SessionDetails_Large_Button {
+    width: 40vh !important;
+}
+
+.SessionDetails_Large_Buttons_Row {
+    margin-right: 24px;
+}
+
+.SessionDetails_Table_Border {
+    outline: 1px solid var(--pivotalGray-4);
+    min-height: 172px;
+}
+
+.SessionDetails_Large_Button_Margin {
+    margin-right: 24px;
+}
+
+.SessionDetails_HeaderDiv_BottomMargin {
+    margin-bottom: 24px;
+}
+
+.SessionDetails_TopButtons_Div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    justify-content: right;
+}
+
+.SessionDetails_TopButtons_Div :first-child {
+    margin-right: 18px;
+}
+
+.SessionDetails_Subheader_InnerDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.SessionDetails_LogsMessage {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

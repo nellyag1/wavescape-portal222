@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>icon_start</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4.80143794,1.60448815 C4.35881599,1.27063856 4,1.45126655 4,1.999768 L4,14.5456865 C4,15.0978432 4.36776498,15.287912 4.81834197,14.972377 L13.181658,9.11562217 C13.6336158,8.79912021 13.6440947,8.27410151 13.1985621,7.93805652 L4.80143794,1.60448815 Z" id="path-1"></path>
+    </defs>
+    <g id="icon_start" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Page-1-Copy" fill="#06749F" xlink:href="#path-1"></use>
+    </g>
+</svg>

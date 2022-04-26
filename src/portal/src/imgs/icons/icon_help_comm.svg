@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>icon_help_comm</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon_help_comm" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10,0 C4.48,0 0,4.48 0,10 C0,15.52 4.48,20 10,20 C15.52,20 20,15.52 20,10 C20,4.48 15.52,0 10,0 L10,0 Z" id="Path" fill="#445E6F"></path>
+        <polygon id="Path" fill="#FFFFFF" points="11.075 17 8.975 17 8.975 15 11.075 15"></polygon>
+        <path d="M13.2485,9.25 L12.3035,10.17 C11.5475,10.9 11.075,11.5 11.075,13 L8.975,13 L8.975,12.5 C8.975,11.4 9.4475,10.4 10.2035,9.67 L11.5055,8.41 C11.894,8.05 12.125,7.55 12.125,7 C12.125,5.9 11.18,5 10.025,5 C8.87,5 7.925,5.9 7.925,7 L5.825,7 C5.825,4.79 7.7045,3 10.025,3 C12.3455,3 14.225,4.79 14.225,7 C14.225,7.88 13.847,8.68 13.2485,9.25 L13.2485,9.25 Z" id="Path" fill="#FFFFFF"></path>
+    </g>
+</svg>

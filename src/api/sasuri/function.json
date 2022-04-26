@@ -1,0 +1,20 @@
+{
+    "scriptFile": "session_sas_uri.py",
+    "bindings": [
+        {
+            "authLevel": "Anonymous",
+            "type": "httpTrigger",
+            "direction": "in",
+            "name": "req",
+            "route": "sessions/{sessionName}/sasuri",
+            "methods": [
+                "get"
+            ]
+        },
+        {
+            "type": "http",
+            "direction": "out",
+            "name": "$return"
+        }
+    ]
+}

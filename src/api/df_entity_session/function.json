@@ -1,0 +1,10 @@
+{
+    "scriptFile": "df_entity_session.py",
+    "bindings": [
+        {
+            "name": "context",
+            "type": "entityTrigger",
+            "direction": "in"
+        }
+    ]
+}

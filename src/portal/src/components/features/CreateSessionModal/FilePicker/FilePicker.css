@@ -1,0 +1,34 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2021 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+.FilePicker_OuterDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.FilePicker_FileName_Div {
+    display: flex;
+    height: 100%;
+    margin: auto 0;
+    padding: 0 24px;
+}
+
+.FilePicker_FileName_Div p {
+    margin: auto 0;
+    padding-left: 14px;
+}
+
+.FilePicker_FileName {
+    color: var(--pivotalBlack);
+    font: var(--ibmsFont-7);
+    margin-left: 32px;
+    margin-top: 54px;
+}
+
+.Global_Large_Button input[type='file'],
+.Global_Large_Button_Active input[type='file'] {
+    display: none;
+}

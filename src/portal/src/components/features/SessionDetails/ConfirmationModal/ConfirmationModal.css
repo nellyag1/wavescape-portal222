@@ -1,0 +1,14 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2022 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+.ConfirmationModal_Subheader {
+    margin-bottom: 72px;
+    max-width: 70%;
+    line-height: 22px;
+}
+
+.ConfirmationModal_ActionMessage {
+    margin-top: 24px;
+}

@@ -1,0 +1,87 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2021 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+.SearchBar_Input_Div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 254px;
+    padding-top: 6px;
+    padding-left: 8px;
+    height: 30px;
+    border-radius: 3px;
+    color: var(--spaceBlue);
+}
+
+.SearchBar_Container {
+    height: 100%;
+    position: relative;
+    height: 40px;
+    line-height: 100%;
+    border-radius: 3px;
+    border: 1px solid var(--spaceBlue-5);
+    background-color: var(--bermudaBlue-8);
+}
+
+.SearchBar_Input_Div input {
+    padding-left: 14px;
+    border-style: none !important;
+    height: 100%;
+    font: var(--ibmsFont-7);
+    color: var(--spaceBlue);
+    background-color: var(--bermudaBlue-8);
+    top: 0px;
+    left: 0px;
+    width: 210px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.SearchBar_Input_Div input::placeholder {
+    font: var(--ibmsFont-8);
+    font-style: italic;
+    color: var(--pivotalGray);
+}
+
+.SearchBar_Input_Div input:focus {
+    outline: none !important;
+}
+
+.SearchBar_Container:focus-within,
+.SearchBar_Input_Div input:focus-within {
+    background-color: white;
+    border: 2px solid var(--bermudaBlue-3);
+}
+
+.SearchBar_Dropdown_List {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: var(--dropBoxShadow);
+    box-sizing: border-box;
+    margin-top: 3px;
+    max-height: 500px;
+    overflow-y: auto;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+    font: var(--ibmsFont-8);
+    padding-left: 0;
+}
+
+.SearchBar_Dropdown_ListItem {
+    list-style: none;
+    box-sizing: border-box;
+    color: var(--spaceBlue);
+    cursor: pointer;
+    display: block;
+    padding: 12px 16px 12px;
+}
+
+.SearchBar_Dropdown_ListItem:hover {
+    background-color: var(--bermudaBlue-7);
+    font: var(--ibmsFont-7);
+}

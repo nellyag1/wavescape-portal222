@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>icon_error_mid</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon_error_mid" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-16">
+            <g id="Group-13" stroke="#C60000">
+                <path d="M9.93768812,1.77118867 C9.41981727,0.792988177 8.57798271,0.797143772 8.06231188,1.77118867 L0.937688118,15.2288113 C0.41981727,16.2070118 0.892622799,17 1.99508929,17 L16.0049107,17 C17.1067681,17 17.5779827,16.2028562 17.0623119,15.2288113 L9.93768812,1.77118867 Z" id="Page-1"></path>
+            </g>
+            <g id="Group-15" transform="translate(8.000000, 6.000000)" fill="#C60000">
+                <path d="M1,6 L1,6 C0.448,6 0,5.616 0,5.14285714 L0,0.857142857 C0,0.384 0.448,0 1,0 L1,0 C1.552,0 2,0.384 2,0.857142857 L2,5.14285714 C2,5.616 1.552,6 1,6" id="Fill-1"></path>
+                <path d="M1,9 L1,9 C0.448,9 0,8.552 0,8 L0,8 C0,7.448 0.448,7 1,7 L1,7 C1.552,7 2,7.448 2,8 L2,8 C2,8.552 1.552,9 1,9" id="Fill-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,74 @@
+# +----------------------------------------------------------------------------
+# | Copyright (c) 2022 Pivotal Commware
+# | All rights reserved.
+# | 
+# | deploy.yml
+# | reusable Azure pipeline deploy steps
+# +----------------------------------------------------------------------------
+parameters:
+- name: azureSubscription
+  type: string
+  default: 'wavescape'
+
+jobs:
+- job: StandupAzureInfra
+  steps:
+  - checkout: self
+  - task: AzureCLI@2
+    name: AzureDeployment
+    displayName: Standup Azure Infrastructure
+    inputs:
+      azureSubscription: ${{parameters.azureSubscription}}
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: './bin/infra-standup.sh'
+
+- job: DeployPortal
+  dependsOn: StandupAzureInfra
+  variables:
+    deploymentToken: $[ dependencies.StandupAzureInfra.outputs['AzureDeployment.deploymentToken'] ]
+    staticAppName: $[ dependencies.StandupAzureInfra.outputs['AzureDeployment.staticAppName'] ]
+    appInsightsConnString: $[ dependencies.StandupAzureInfra.outputs['AzureDeployment.appInsightsConnString'] ]
+
+    # Must start with REACT_APP_ for the magic to happen
+    REACT_APP_BUILD_VERSION_STRING: $(Build.SourceBranchName).$(ShortCommitId).$(ShortDate)
+    REACT_APP_APPLICATION_INSIGHTS_CONNECTION_STRING: $(appInsightsConnString)
+    #REACT_APP_APPLICATION_INSIGHTS_URL: 'https://portal.azure.com/#@ibmspivotal.onmicrosoft.com/resource/subscriptions/022f9a31-8566-4d3c-a2ef-5f0b8f3a6b95/resourceGroups/$(AZURE_DEFAULTS_GROUP)/providers/Microsoft.Insights/components/$(AZURE_DEFAULTS_GROUP)-appinsights/logs'
+    REACT_APP_APPLICATION_INSIGHTS_URL: 'https://portal.azure.com/#@ibmspivotal.onmicrosoft.com/resource/subscriptions/$(AZURE_SUBSCRIPTION)/resourceGroups/$(AZURE_DEFAULTS_GROUP)/providers/Microsoft.Insights/components/$(AZURE_DEFAULTS_GROUP)-appinsights/logs'
+  steps:
+  - checkout: self
+  - bash: |
+      echo $(deploymentToken)
+      echo $(staticAppName)
+      echo $(appInsightsConnString)
+  - powershell: |
+      Write-Host '$(deploymentToken)'
+      $date=$(Get-Date -format yyyyMMddHHmm)
+      Write-Host "##vso[task.setvariable variable=ShortDate]$date"
+      $commitId="$(Build.SourceVersion)".SubString(0,8)
+      Write-Host "##vso[task.setvariable variable=ShortCommitId]$commitId"
+    displayName: Collect Build Info
+  - task: AzureStaticWebApp@0
+    inputs:
+      app_location: 'src/portal'
+      api_location: ''
+      output_location: build
+    env:
+      azure_static_web_apps_api_token: '$(deploymentToken)'
+    displayName: Deploy Static Web App
+
+
+- job: DeployApi
+  dependsOn: StandupAzureInfra
+  steps:
+  - checkout: self
+  - download: current
+    artifact: ApiPackage
+  - task: AzureCLI@2
+    displayName: Deploy API
+    inputs:
+      azureSubscription: 'wavescape'
+      scriptLocation: 'scriptPath'
+      scriptType: 'bash'
+      scriptPath: './bin/api-deploy.sh'
+      arguments:  '$(Pipeline.Workspace)/ApiPackage/api.zip'

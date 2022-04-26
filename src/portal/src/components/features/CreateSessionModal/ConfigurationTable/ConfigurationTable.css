@@ -1,0 +1,36 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2022 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+.ConfigurationTable_Div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ConfigurationTable_td {
+    width: 127px;
+}
+
+.ConfigurationTable_td_col1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ConfigurationTable_td_col2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ConfigurationTable_td_col1 > div > div > img {
+    margin-left: 4px;
+}
+
+.ConfigurationTable_td_disabled {
+    color: var(--ibmsTextDarkGray);
+}

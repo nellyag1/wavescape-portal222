@@ -1,0 +1,46 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2022 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+.Navbar_OuterDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--spaceBlue);
+    padding: 32px;
+}
+
+.Navbar_InnerDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Navbar_Item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font: var(--ibmsFont-6);
+    margin-left: 32px;
+    cursor: default;
+}
+
+.Navbar_Item a {
+    color: var(--ibmsTrayGray);
+    text-decoration: none;
+    cursor: default;
+}
+
+.Navbar_Item a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.Navbar_Item div img {
+    padding-left: 12px;
+    cursor: default;
+}

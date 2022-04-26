@@ -1,0 +1,42 @@
+# +----------------------------------------------------------------------------
+# | Copyright (c) 2022 Pivotal Commware
+# | All rights reserved.
+# | 
+# | pipeline.yml
+# | Azure DevOps Pipeline
+# +----------------------------------------------------------------------------
+
+trigger:
+- dev-eu
+#- feature/WAV-N   ## NOTE: hackery, only uncomment and add your branch if you know what you are doing and why you need to
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  #AZURE_SUBSCRIPTION: '022f9a31-8566-4d3c-a2ef-5f0b8f3a6b95'
+  #AZURE_DEFAULTS_LOCATION: 'westus2'
+  GIT_REPO_URL: $(Build.Repository.Uri)
+  GIT_BRANCH_NAME: $(Build.SourceBranchName)
+
+stages:
+- stage: Build
+  jobs:
+  - template: job-build.yml
+
+- stage: StagingEU
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))  # PR builds do not deploy to staging
+  dependsOn: Build
+  variables:
+    AZURE_DEFAULTS_GROUP: 'ws-portal-staging-eu'
+    ENVIRONMENT_TYPE: 'staging'
+    WS_RUNNER_GROUP: 'ws-runner-staging-EU'
+    AZURE_SUBSCRIPTION: '98df9244-70a1-41a9-aa00-453fd9d83fd1'
+    AZURE_DEFAULTS_LOCATION: 'westeurope'
+  jobs:
+  - template: job-deploy.yml
+    parameters:
+      azureSubscription: 'wavescape_eu'
+
+  
+

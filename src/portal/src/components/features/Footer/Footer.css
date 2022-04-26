@@ -1,0 +1,18 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2022 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+.Footer_OuterDiv {
+    font: var(--ibmsFont-8);
+    color: var(--ibmsLightGray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--spaceBlue);
+    padding: 12px 32px 12px;
+    position: fixed;
+    bottom: 0;
+    width: -webkit-fill-available;
+}

@@ -1,0 +1,54 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2022 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+.ImportSite_OuterDiv {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 24px -8px 0 -8px;
+}
+
+.ImportSite_Attribute_OuterDiv {
+    width: 50%;
+}
+
+.ImportSite_Attribute_Wrapper {
+    height: 46px;
+    background-color: var(--pivotalGray-7);
+    color: var(--spaceBlue);
+    font: 400 13px 'Rubik';
+    margin: 0px 8px 8px 8px;
+    padding-right: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ImportSite_Attribute_InnerDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-left: 18px;
+}
+
+.ImportSite_Attribute_InnerDiv p {
+    margin-right: 8px;
+    width: min-content;
+}
+
+.Dropdown-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: 300 13px 'Rubik';
+    color: var(--ibmsNavy);
+    padding-right: 8px;
+    border-color: var(--bermudaBlue-6);
+    border-radius: 3px;
+    background-color: var(--pivotalGray-8);
+    height: 34px;
+    width: 256px;
+}

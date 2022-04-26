@@ -1,0 +1,103 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2022 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+.Dropdown_Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: 300 13px 'Rubik';
+    color: var(--ibmsNavy);
+    padding-right: 8px;
+    padding-left: 12px;
+    border-radius: 3px;
+    border: 1px solid var(--bermudaBlue-6);
+    background-color: var(--pivotalGray-8);
+    height: 34px;
+}
+
+.Dropdown_ListContainer_Search {
+    margin-top: 3px;
+    padding-top: 8px;
+}
+
+.Dropdown_ListContainer_Search .SearchBar_Container {
+    margin: 12px 8px 12px;
+    border: 1px solid var(--bermudaBlue-6);
+}
+
+.Dropdown_ListContainer_Search .SearchBar_Container:focus-within,
+.Dropdown_ListContainer_Search .SearchBar_Input_Div input:focus-within {
+    background-color: white;
+    border: 2px solid var(--bermudaBlue-3);
+}
+
+.Dropdown_ListContainer_Search .SearchBar_Container .SearchBar_Input_Div {
+    width: 210px;
+}
+
+.Dropdown_InputField_Divider {
+    border-top: 1px solid #d0d0d0;
+    margin: 20px 0 0;
+}
+
+.Dropdown_InputField_OuterDiv {
+    padding: 14px 16px 16px;
+}
+
+.Dropdown_InputField_OuterDiv p {
+    font: var(--ibmsFont-7);
+    color: var(--spaceBlue);
+    padding-bottom: 6px;
+    margin: 0;
+}
+
+.Dropdown_InputField_InnerDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Dropdown_Button {
+    height: 32px;
+    width: 41px;
+    padding: 0px;
+}
+
+.Dropdown_InputField {
+    width: 180px;
+    margin-right: 8px;
+    padding-left: 8px;
+    border: 1px solid var(--spaceBlue-5);
+}
+
+@media (max-width: 1200px) {
+    .Dropdown_InputField {
+        width: 120px;
+        margin-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+.Dropdown_InputField_Error {
+    width: 180px;
+    margin-right: 8px;
+    padding-left: 8px;
+    background: var(--errorRed-bg);
+    border: 1px solid var(--errorRed-border);
+    color: var(--errorRed);
+}
+
+.Dropdown_InputField_Error:focus-within {
+    width: 180px;
+    margin-right: 8px;
+    padding-left: 8px;
+    color: var(--ibmsNavy);
+    border: 1px solid var(--bermudaBlue-6);
+    background-color: var(--pivotalGray-8);
+}
+
+.Dropdown_BottomSection {
+    padding-bottom: 16px;
+}

@@ -1,0 +1,80 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2022 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+.SessionsTable_OuterDiv {
+    margin: 32px 32px 32px;
+}
+
+.SessionsTable_CreateNewSession_Button_Disabled,
+.SessionsTable_CreateNewSession_Button {
+    height: 40px;
+    align-items: center;
+    padding: 0px 16px 0px;
+    border-radius: 3px;
+    font: var(--ibmsFont-7);
+    background-color: var(--pivotalGray-5-5);
+    border: 1px solid var(--pivotalGray-3);
+    margin-left: 24px;
+}
+
+.SessionsTable_CreateNewSession_Button:hover {
+    cursor: pointer;
+    background-color: var(--ibmsLightOrange);
+}
+
+.SessionTable_Div_AlertMessage {
+    margin-top: 24px;
+}
+
+.SessionsTable_Div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.SessionsTable_NewSession_InnerDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.SessionsTable_tr-th_Div {
+    display: flex;
+    align-items: center;
+}
+
+.SessionsTable_SearchBar_Div {
+    display: flex;
+    flex-direction: column;
+    width: 256px;
+}
+
+.SessionsTable_DropDown_Container_TwoCol {
+    right: 243px;
+    width: 100%;
+}
+
+.SessionsTable_DropDown_ListContainer_TwoCol {
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    width: 500px;
+}
+
+.SessionsTable_DropDown_ListContainer_TwoCol > div {
+    min-width: 50%;
+}
+
+.SessionsTable_Dropdown_Small {
+    width: 112px;
+    right: 28px;
+}
+
+.SessionsTable_Container {
+    min-height: 64vh;
+    max-height: calc(65vh - 50px);
+}

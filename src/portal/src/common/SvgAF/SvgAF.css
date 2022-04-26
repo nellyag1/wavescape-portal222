@@ -1,0 +1,45 @@
+/* +----------------------------------------------------------------------------
+| Copyright (c) 2021 Pivotal Commware
+| All rights reserved.
++---------------------------------------------------------------------------- */
+
+.SvgAF_Div_Hover {
+	cursor: pointer;
+}
+
+.SvgAF {
+	margin: 0px 0px;
+	padding: 0px 0px;
+	display: flex;
+	align-items: center;
+	min-width: 24px;
+}
+
+.SvgAF_Img_Scale {
+	height: 100%;
+	width: 100%;
+}
+
+.IconAndText {
+	display: flex;
+	align-items: center;
+	border-radius: 3px;
+	height: 100%;
+}
+
+.IconAndText span {
+	position: relative;
+}
+
+.IconAndText .SvgAF {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.IconAndText:hover {
+	cursor: pointer;
+}
+
+.IconAndText_Text {
+	padding-right: 8px;
+}

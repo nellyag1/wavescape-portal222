@@ -1,0 +1,21 @@
+# +----------------------------------------------------------------------------
+# | Copyright (c) 2022 Pivotal Commware
+# | All rights reserved.
+# | 
+# | job-build.yml
+# | reusable Azure pipeline build steps
+# +----------------------------------------------------------------------------
+jobs:
+  - job: Api
+    steps:
+    - checkout: self
+    - task: UsePythonVersion@0
+      displayName: "Installing Python 3.9"
+      inputs:
+        versionSpec: '3.9'
+        architecture: 'x64'
+    - bash: './bin/api-build.sh'
+      name: Build
+    - publish: '$(Build.apiArtifact)'
+      artifact: ApiPackage
+      displayName: Publish Package

@@ -1,0 +1,10 @@
+{
+    "scriptFile": "df_activity_check_task_status.py",
+    "bindings": [
+        {
+            "name": "payload",
+            "type": "activityTrigger",
+            "direction": "in"
+        }
+    ]
+}
