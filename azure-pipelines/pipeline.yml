@@ -28,15 +28,15 @@ stages:
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))  # PR builds do not deploy to staging
   dependsOn: Build
   variables:
-    AZURE_DEFAULTS_GROUP: 'ws-portal-staging-eu'
+    AZURE_DEFAULTS_GROUP: 'rg-testNelly'
     ENVIRONMENT_TYPE: 'staging'
-    WS_RUNNER_GROUP: 'ws-runner-staging-EU'
-    AZURE_SUBSCRIPTION: '98df9244-70a1-41a9-aa00-453fd9d83fd1'
+    WS_RUNNER_GROUP: 'rg-testNelly'
+    AZURE_SUBSCRIPTION: '90d7af21-b3a1-4bf8-a149-8e1fcc47e337'
     AZURE_DEFAULTS_LOCATION: 'westeurope'
   jobs:
   - template: job-deploy.yml
     parameters:
-      azureSubscription: 'wavescape_eu'
+      azureSubscription: 'MAIC - TEK Experts CR - v-gengon Group#1'
 
   
 
