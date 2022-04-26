@@ -36,7 +36,7 @@ stages:
   jobs:
   - template: job-deploy.yml
     parameters:
-      azureSubscription: 'MAIC - TEK Experts CR - v-gengon Group#1'
+      azureSubscription: '90d7af21-b3a1-4bf8-a149-8e1fcc47e337'
 
   
 
